@@ -296,25 +296,6 @@
             </objects>
             <point key="canvasLocation" x="797" y="-4967"/>
         </scene>
-        <!--Photos-->
-        <scene sceneID="HC4-Ql-pAe">
-            <objects>
-                <viewController id="l1y-03-UWA" customClass="RootViewController" customModule="AdaptiveSegue" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="d69-a0-bIz"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vfa-vL-fgW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Xkk-9F-io5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Photos" id="1aC-ef-nCP"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9gs-5s-ivR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="630" y="-2131"/>
-        </scene>
         <!--Master-->
         <scene sceneID="EDQ-Kl-lbK">
             <objects>
@@ -339,9 +320,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="NCc-n5-9QI" kind="show" identifier="showFoto" id="sJI-s4-yYs"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -381,7 +359,7 @@
                 <splitViewController id="Ucz-og-2Wh" sceneMemberID="viewController">
                     <connections>
                         <segue destination="kig-hf-yPU" kind="relationship" relationship="masterViewController" id="EaS-8a-rXP"/>
-                        <segue destination="l1y-03-UWA" kind="relationship" relationship="detailViewController" id="Zko-lf-Ssk"/>
+                        <segue destination="NCc-n5-9QI" kind="relationship" relationship="detailViewController" id="dp7-ug-W1Z"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVo-sP-a39" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -391,7 +369,7 @@
         <!--Photo View Controller-->
         <scene sceneID="s40-0c-47p">
             <objects>
-                <viewController id="NCc-n5-9QI" customClass="PhotoViewController" customModule="AdaptiveSegue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="photoVC" id="NCc-n5-9QI" customClass="PhotoViewController" customModule="AdaptiveSegue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w3e-FR-IXI"/>
                         <viewControllerLayoutGuide type="bottom" id="iYP-Cz-7Ra"/>
@@ -400,9 +378,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7o-im-ckr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N7o-im-ckr">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -420,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfL-Nf-sTT" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2476" y="-1147"/>
+            <point key="canvasLocation" x="661" y="-2007"/>
         </scene>
     </scenes>
 </document>

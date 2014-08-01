@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class PhotoTableViewController: UITableViewController {
+class PhotoTableViewController: UITableViewController, UITableViewDelegate {
 
 
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
@@ -24,6 +24,15 @@ class PhotoTableViewController: UITableViewController {
             photoVC.title = "Neve"
         }
         
+    }
+
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        
+        let photoVC = UIStoryboard(name:"Main", bundle:nil).instantiateViewControllerWithIdentifier("photoVC") as PhotoViewController
+        photoVC.image = UIImage(named: "neve")
+        self.showDetailViewController(photoVC, sender: self)
+        // o 
+        // self.showViewController(photoVC, sender: self)
     }
 
 }
